@@ -45,7 +45,7 @@ public class CAI4 {
 		int questionDifficulty = in.nextInt();
 		
 		while (true) {
-			if (questionDifficulty >= 1 || questionDifficulty <= 1) {
+			if (questionDifficulty >= 1 && questionDifficulty <= 4) {
 				return questionDifficulty;
 			}
 			
@@ -55,7 +55,6 @@ public class CAI4 {
 		            String input = in.next();
 		            System.out.printf("\"%s\" is not a valid number.\n", input);
 		        }
-				
 				questionDifficulty = in.nextInt();
 			}
 		}
