@@ -91,16 +91,16 @@ public class CAI3 {
 		switch (negativeMessages) {
 		
 			case 1:
-				System.out.println("No. Please try again.");
+				System.out.println("No. Please try this problem.");
 				break;
 			case 2:
-				System.out.println("Wrong. Try once more.");
+				System.out.println("Wrong. Try this one.");
 				break;
 			case 3:
 				System.out.println("Don’t give up!");
 				break;
 			case 4:
-				System.out.println("No. Keep trying.");
+				System.out.println("No. Good try.");
 				break;
 		}
 	}
@@ -109,7 +109,7 @@ public class CAI3 {
 		
 		double score = (double) correctCount / 10.0 * 100.0;
 		
-		System.out.println(score + "% Was your score on this problem set.");
+		System.out.println("You scored " + score + "% on this problem set.");
 		if (score < 75) {
 			System.out.println("Please ask your teacher for extra help.");
 		}
@@ -131,10 +131,13 @@ public class CAI3 {
 			if (continueResponse.equals(no)) {
 				break;
 			}
+			System.out.println("Please input \"yes\" or \"no\"");
 			continueResponse = in.next();
 		}
 		
 		if (continueResponse.equals(yes)) {
+			correctCount = 0;
+			incorrectCount = 0;
 			quiz();
 		}
 		else {
